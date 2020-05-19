@@ -11,38 +11,8 @@ nunjucks.configure('views', {
   noCache: true
 })
 
-// const ideas = [
-//   {
-//     img: 'https://image.flaticon.com/icons/svg/2729/2729007.svg',
-//     title: 'Curso de Programação',
-//     category: 'Estudo',
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, vitae id velit ducimus odit',
-//     url: 'https://ncode.com.br'
-//   },
-//   {
-//     img: 'https://image.flaticon.com/icons/svg/2729/2729005.svg',
-//     title: 'Exercícios',
-//     category: 'Saúde',
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, vitae id velit ducimus odit',
-//     url: 'https://ncode.com.br'
-//   },
-//   {
-//     img: 'https://image.flaticon.com/icons/svg/2729/2729027.svg',
-//     title: 'Meditação',
-//     category: 'Mentalidade',
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, vitae id velit ducimus odit',
-//     url: 'https://ncode.com.br'
-//   },
-//   {
-//     img: 'https://image.flaticon.com/icons/svg/2729/2729032.svg',
-//     title: 'Karaôke',
-//     category: 'Família',
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, vitae id velit ducimus odit',
-//     url: 'https://ncode.com.br'
-//   },
-// ]
 
-
+// PAGE DAFAULT
 server.get('/', (req, res) => {
   db.all(`SELECT * FROM ideas`, (err, rows) => {
     if (err) return console.log(err);
@@ -60,6 +30,7 @@ server.get('/', (req, res) => {
   })
 })
 
+// LIST IDEAS
 server.get('/ideas', (req, res) => {
   db.all(`SELECT * FROM ideas`, (err, rows) => {
     const reverserdIdeas = [...rows].reverse()
@@ -69,6 +40,7 @@ server.get('/ideas', (req, res) => {
   })
 })
 
+// CREATE IDEA
 server.post('/', (req, res) => {
   const { title, image, category, description, url } = req.body
 
@@ -77,6 +49,18 @@ server.post('/', (req, res) => {
     if(err) {
       res.send('Erro de conexão no banco de dados.')
     }
+    res.redirect('/ideas')
+  })
+
+})
+
+// DELETE IDEA
+server.post('/delete/:id', (req, res) => {
+  const idIdea = req.params.id
+
+  db.run(`DELETE FROM ideas WHERE id = ?`, [idIdea], (err) => {
+    if(err) console.log(err);
+
     res.redirect('/ideas')
   })
 

@@ -9,5 +9,10 @@
     </div>
     <a href="{{idea.url}}" target="_blank">Ir para ideia</a>
   </div>
+  <div class="close">
+    <form class="noClass" action="/delete/{{idea.id}}" method="POST">
+      <button type="submit"><i class="fa fa-close"></i></button>
+    </form>
+  </div>
 </div>
 {% endfor %}
