@@ -1,0 +1,30 @@
+{
+  "name": "casa-criativa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alnsantos90/news-ideas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alnsantos90/news-ideas/issues"
+  },
+  "homepage": "https://github.com/alnsantos90/news-ideas#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-gyp": "^6.1.0",
+    "nunjucks": "^3.2.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
