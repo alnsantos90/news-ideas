@@ -6,3 +6,5 @@ Usuário pode enviar ideias para serem realizadas durante esse período difícil
 
 ### Link do projeto
 https://alnsantos90.github.io/news-ideas/
+
+Desenvolvido por Allan S.
