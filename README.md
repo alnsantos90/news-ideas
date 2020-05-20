@@ -5,4 +5,5 @@ Projeto lançado pelA rocketseat, feito para botar a mão no código e não fica
 Usuário pode enviar ideias para serem realizadas durante esse período difícil que estamos passando com essa quarentena, por causa do vírus COVID-19 (coronavírus)
 
 ### Link do projeto
-https://alnsantos90.github.io/news-ideas/
+
+<a href="https://alnsantos90.github.io/news-ideas/" target="_blank">https://alnsantos90.github.io/news-ideas/</a>
