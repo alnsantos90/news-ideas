@@ -1,0 +1,34 @@
+@media screen and (max-width: 600px) {
+  #container {
+    width: 90%;
+    display: block;
+  }
+
+  #intro {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .idea {
+    display: block;  
+    padding: 20px;
+  }
+
+  .idea-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .idea img {
+    margin: 15px 0;
+  }
+
+  .idea .content h3, .idea .content p {
+    text-align: center;
+  }
+  
+}
