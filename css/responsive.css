@@ -1,4 +1,10 @@
+/* PAGE INICIAL */
+
 @media screen and (max-width: 600px) {
+  /* body {
+    margin-top: 100px;
+  } */
+
   #container {
     width: 90%;
     display: block;
@@ -14,7 +20,7 @@
   }
 
   .idea {
-    display: block;  
+    display: block;
     padding: 20px;
   }
 
@@ -22,13 +28,118 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .idea img {
     margin: 15px 0;
   }
 
-  .idea .content h3, .idea .content p {
+  .idea .content h3,
+  .idea .content p {
     text-align: center;
   }
-  
+
+  #pages-ideas header {
+    padding: 0;
+    position:fixed;
+  }
+
+  #page-ideas header img {
+    width: 200px;
+    padding: 0;
+  } 
+
+  #page-ideas header {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    padding: 2px 8px;
+    font-size: 35px;
+    outline: none;
+    display: block;
+    color: #ff5384;
+  }
+
+  .menu-mobile {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .menu-mobile nav {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    transition: all .1s;
+  }
+
+
+  nav li {
+    margin: 20px auto;
+  }
+
+  nav li:last-child a {
+    margin: 0 auto;
+  }
+
+  #page-ideas #title {
+    /* margin-top: 130px; */
+  }
+
+  #page-ideas #grid-ideas {
+    grid-template-columns: 1fr;
+  }
+
+  #page-ideas .idea img {
+    margin: 15px 0;
+  }
+
+  #page-ideas .idea .content h3,
+  #page-ideas .idea .content p {
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 959px) {
+  #container {
+    width: 90%;
+    display: block;
+  }
+
+  #intro {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+}
+
+
+
+/* PAGE IDEAS */
+
+@media screen and (min-width: 600px) and (max-width: 840px) {
+  #page-ideas #grid-ideas {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    background: #e5e5e5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 40px;
+    z-index: 99;
+  }
+
+  #title {
+    margin-top: 130px;
+  }
+
 }
