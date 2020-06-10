@@ -1,9 +1,11 @@
 /* PAGE INICIAL */
 
+svg.svg-inline--fa.fa-bars.fa-w-14 {
+  display: none;
+}
+
+
 @media screen and (max-width: 600px) {
-  /* body {
-    margin-top: 100px;
-  } */
 
   #container {
     width: 90%;
@@ -40,13 +42,13 @@
 
   #pages-ideas header {
     padding: 0;
-    position:fixed;
+    position: fixed;
   }
 
   #page-ideas header img {
     width: 200px;
     padding: 0;
-  } 
+  }
 
   #page-ideas header {
     flex-wrap: wrap;
@@ -61,18 +63,22 @@
   }
 
   .menu-mobile {
-    display: none;
+    display: block;
     width: 100%;
-    margin-top: 30px;
+    transition: all 1s;
+    position: relative;
+    transform: translateX(500px);
   }
 
   .menu-mobile nav {
-    display: none;
+    visibility: hidden;
+    flex-direction: column !important;
     margin: 0 auto;
     text-align: center;
-    position: relative;
-    transition: all .1s;
+    transform: translateX(500px);
+    transition: all .5s;
   }
+
 
 
   nav li {
@@ -81,10 +87,6 @@
 
   nav li:last-child a {
     margin: 0 auto;
-  }
-
-  #page-ideas #title {
-    /* margin-top: 130px; */
   }
 
   #page-ideas #grid-ideas {
@@ -100,9 +102,22 @@
     text-align: center;
   }
 
-}
+  svg.svg-inline--fa.fa-bars.fa-w-14 {
+    display: block;
+  }
 
-@media screen and (min-width: 601px) and (max-width: 959px) {
+  main {
+    margin: 32px 0;
+    transform: translateY(-80px);
+    margin: 0;
+  }
+  #title {
+    text-align: center;
+    transform: translateY(-80px);
+  }
+
+}
+@media (min-width: 601px) and (max-width: 959px) {
   #container {
     width: 90%;
     display: block;
@@ -117,8 +132,38 @@
     text-align: center;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+    transition: all 1s;
+  }
+
+  .menu-mobile nav {
+    visibility: hidden;
+    margin: 0 auto;
+    text-align: center;
+    transition: all .5s;
+  }
+
 }
 
+
+@media screen and (min-width: 960px) {
+  .menu-mobile {
+    display: block;
+    transition: all 1s;
+  }
+
+  .menu-mobile nav {
+    visibility: hidden;
+    margin: 0 auto;
+    text-align: center;
+    transition: all .5s;
+  }
+}
 
 
 /* PAGE IDEAS */
@@ -127,19 +172,4 @@
   #page-ideas #grid-ideas {
     grid-template-columns: 1fr;
   }
-
-  header {
-    background: #e5e5e5;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 20px 40px;
-    z-index: 99;
-  }
-
-  #title {
-    margin-top: 130px;
-  }
-
 }

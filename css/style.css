@@ -1,3 +1,6 @@
+html { 
+  overflow-x: hidden;
+}
 body {
   background: #e5e5e5;
   color: #25282b;
@@ -302,6 +305,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 nav {
@@ -352,10 +356,8 @@ nav li a {
 
 #title {
   text-align: center;
-
-  margin: 60px;
+  margin: 60px ;
 }
-
 #title p {
   margin: 0;
 
