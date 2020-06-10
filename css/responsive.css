@@ -106,12 +106,12 @@ svg.svg-inline--fa.fa-bars.fa-w-14 {
     display: block;
   }
 
-  main {
+ #page-ideas main {
     margin: 32px 0;
     transform: translateY(-80px);
     margin: 0;
   }
-  #title {
+ #page-ideas #title {
     text-align: center;
     transform: translateY(-80px);
   }
@@ -158,7 +158,7 @@ svg.svg-inline--fa.fa-bars.fa-w-14 {
   }
 
   .menu-mobile nav {
-    visibility: hidden;
+    visibility: visible;
     margin: 0 auto;
     text-align: center;
     transition: all .5s;

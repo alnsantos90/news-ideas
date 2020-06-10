@@ -70,11 +70,14 @@ window.onresize = () => {
       getBtnToggle.style.transform = 'translateX(0px)'
       getTitle.style.transform = 'translateY(0px)'
       getMain.style.transform = 'translateY(0px)'
+      toggle = false
     } else {
       getNav.style.visibility = 'hidden'
       getNav.style.transform = 'translateX(500px)'
       getBtnToggle.style.transform = 'translateX(500px)'
       getTitle.style.transform = 'translateY(-80px)'
       getMain.style.transform = 'translateY(-80px)'
+      tl.reverse()
+      toggle = true
     }
   }
